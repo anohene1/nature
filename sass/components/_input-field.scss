@@ -1,0 +1,13 @@
+.form {
+  &__input {
+
+    &-text {
+      padding: 1rem 2rem;
+      font-family: inherit;
+      width: 30rem;
+      outline: none;
+      border: 2px solid $color-black;
+      background-color: transparent;
+    }
+  }
+}

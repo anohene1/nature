@@ -1,0 +1,258 @@
+.container {
+  display: grid;
+  grid-template-rows: calc(100vh - 3rem);
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.3); }
+
+.header {
+  display: grid;
+  grid-template-rows: min-content; }
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr)); }
+
+.ads {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr)); }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  grid-gap: 2rem; }
+
+.header {
+  background-image: url("../img/big-leaf-1.jpg");
+  background-size: cover;
+  color: #ffffff; }
+  .header__container {
+    align-self: center;
+    justify-self: center;
+    border: 0.4rem solid #ffffff;
+    padding: 8rem;
+    width: 90rem;
+    text-align: center; }
+
+.nav {
+  display: flex;
+  padding: 4rem; }
+  .nav__logo {
+    font-size: 3.5rem;
+    flex: 1; }
+  .nav__items {
+    list-style: none; }
+  .nav__item {
+    display: inline-block; }
+  .nav__link {
+    position: relative; }
+    .nav__link::after {
+      content: "";
+      width: 0%;
+      height: 3px;
+      background-color: white;
+      position: absolute;
+      bottom: -1rem;
+      left: 0;
+      transition: width .2s; }
+    .nav__link:hover {
+      color: #ffffff; }
+      .nav__link:hover::after {
+        width: 100%; }
+  .nav__link:link, .nav__link:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ACB4B9;
+    font-size: 2rem;
+    margin-right: 5rem; }
+    .nav__link:link:hover, .nav__link:visited:hover {
+      color: #ffffff; }
+  .nav__link-active:link, .nav__link-active:visited {
+    color: #ffffff; }
+    .nav__link-active:link::after, .nav__link-active:visited::after {
+      content: "";
+      width: 100%;
+      height: 3px;
+      background-color: white;
+      position: absolute;
+      bottom: -1rem;
+      left: 0;
+      transition: width .2s; }
+
+.heading-1 {
+  font-family: "MADE Coachella";
+  font-weight: lighter;
+  font-size: 7rem;
+  line-height: 1; }
+  .heading-1 span {
+    font-weight: bolder; }
+
+.heading-2 {
+  font-family: "MADE Coachella";
+  font-weight: lighter;
+  font-size: 4rem;
+  line-height: 1; }
+  .heading-2 span {
+    font-weight: bolder; }
+
+.heading-3 {
+  font-family: "MADE Coachella";
+  font-weight: lighter;
+  font-size: 2.5rem;
+  line-height: 1; }
+  .heading-3 span {
+    font-weight: bolder; }
+
+.heading-4 {
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  font-weight: lighter;
+  line-height: 1; }
+
+.mb-sm {
+  margin-bottom: 2rem; }
+
+.mb-md {
+  margin-bottom: 4rem; }
+
+.anim-from-left {
+  animation: moveInLeft 1s; }
+
+.anim-from-right {
+  animation: moveInRight 1s; }
+
+.details {
+  background-color: #D7DDD1;
+  padding: 15rem;
+  font-size: 1.6rem; }
+
+.detail {
+  width: 80%; }
+  .detail:last-child {
+    justify-self: end; }
+  .detail__number {
+    color: #ffffff;
+    font-size: 20rem;
+    line-height: 1; }
+
+.ads {
+  height: 90rem;
+  text-align: center; }
+  .ads > * {
+    background-size: 100% 90rem; }
+  .ads__ad-1 {
+    background-image: url("../img/leaf-1.jpg");
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 3rem 6rem; }
+  .ads__ad-2 {
+    background-image: url("../img/leaf-2.jpeg");
+    display: grid;
+    justify-items: center;
+    align-content: end;
+    padding: 3rem; }
+  .ads__ad-3 {
+    background-image: url("../img/leaf-3.jpg"); }
+  .ads__ad-4 {
+    background-image: url("../img/leaf-4.jpg");
+    color: #ffffff;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    padding-top: 6rem;
+    padding-bottom: 3rem; }
+
+.gallery {
+  padding: 7rem; }
+  .gallery__img {
+    object-fit: cover;
+    width: 100%;
+    height: 50rem; }
+
+.about {
+  background-color: #D7DDD1;
+  padding: 15rem;
+  columns: 2; }
+  .about__text {
+    font-size: 1.6rem;
+    width: 90%; }
+
+.cta {
+  background-image: url("../img/big-leaf-2.jpg");
+  background-size: cover;
+  height: 70rem;
+  padding-top: 30rem;
+  padding-left: 10rem; }
+  .cta h2 {
+    font-size: 6rem; }
+  .cta .btn {
+    margin-left: 1rem; }
+
+.btn {
+  border: 2px solid #000000;
+  padding: 1rem 2rem;
+  outline: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #000000 50%);
+  background-size: 250%;
+  font-size: 1.5rem;
+  color: #000000;
+  cursor: pointer;
+  transition: all .3s; }
+  .btn-white {
+    background-color: white;
+    border: 1px solid #ffffff; }
+  .btn:link, .btn:visited {
+    text-decoration: none; }
+  .btn:hover {
+    color: #ffffff;
+    background-position: 100%; }
+
+.form__input-text {
+  padding: 1rem 2rem;
+  font-family: inherit;
+  width: 30rem;
+  outline: none;
+  border: 2px solid #000000;
+  background-color: transparent; }
+
+.footer {
+  background-color: #323232;
+  text-align: center;
+  padding: 10rem;
+  font-size: 1.7rem; }
+  .footer__text {
+    color: #ACB4B9; }
+  .footer__link:link, .footer__link:active {
+    text-decoration: none;
+    color: #ACB4B9; }
+
+@keyframes moveInLeft {
+  0% {
+    transform: translateX(-10rem);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes moveInRight {
+  0% {
+    transform: translateX(10rem);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  font-family: "Raleway";
+  line-height: 1.6; }
+
+body {
+  padding: 3rem;
+  box-sizing: border-box; }

@@ -1,0 +1,87 @@
+.header {
+  background-image: url("../img/big-leaf-1.jpg");
+  background-size: cover;
+  color: $color-white;
+
+  &__container {
+    align-self: center;
+    justify-self: center;
+    border: .4rem solid $color-white;
+    padding: 8rem;
+    width: 90rem;
+    text-align: center;
+
+  }
+}
+
+.nav {
+  display: flex;
+  padding: 4rem;
+
+  &__logo {
+    font-size: 3.5rem;
+    flex: 1;
+  }
+
+  &__items {
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+  }
+
+  &__link {
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 0%;
+      height: 3px;
+      background-color: white;
+      position: absolute;
+      bottom: -1rem;
+      left: 0;
+      transition: width .2s;
+    }
+
+    &:hover {
+      color: $color-white;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-gray-light;
+    font-size: 2rem;
+    margin-right: 5rem;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  &__link-active:link,
+  &__link-active:visited{
+    color: $color-white;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 3px;
+      background-color: white;
+      position: absolute;
+      bottom: -1rem;
+      left: 0;
+      transition: width .2s;
+    }
+
+  }
+
+}

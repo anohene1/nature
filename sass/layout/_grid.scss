@@ -1,0 +1,33 @@
+.container {
+  display: grid;
+  grid-template-rows: calc(100vh - 3rem);
+  box-shadow: 0 2rem 5rem rgba($color-black, 0.3);
+  //max-width: 160rem;
+  //margin-left: auto;
+  //margin-right: auto;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: min-content;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+}
+
+.ads {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  grid-gap: 2rem;
+}
+
+.details {
+
+}

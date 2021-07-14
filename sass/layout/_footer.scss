@@ -1,0 +1,17 @@
+.footer {
+  background-color: $color-gray-dark;
+  text-align: center;
+  padding: 10rem;
+  font-size: 1.7rem;
+
+
+  &__text {
+    color: $color-gray-light;
+  }
+
+  &__link:link,
+  &__link:active {
+    text-decoration: none;
+    color: $color-gray-light;
+  }
+}
