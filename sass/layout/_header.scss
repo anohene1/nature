@@ -11,12 +11,31 @@
     width: 90rem;
     text-align: center;
 
+    @media (max-width: 900px) {
+      padding: 5rem;
+      width: 70%;
+    }
+
+    @media (max-width: 560px) {
+      //display: none;
+
+      h1 {
+        font-size: 3.2rem;
+      }
+
+      h4 {
+        font-size: 1.5rem;
+      }
+    }
+
   }
 }
 
 .nav {
   display: flex;
   padding: 4rem;
+
+
 
   &__logo {
     font-size: 3.5rem;
@@ -25,6 +44,10 @@
 
   &__items {
     list-style: none;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
 
   &__item {

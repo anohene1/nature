@@ -4,6 +4,10 @@
   font-size: 7rem;
   line-height: 1;
 
+  @media (max-width: 900px) {
+    font-size: 5rem;
+  }
+
   span {
     font-weight: bolder;
   }

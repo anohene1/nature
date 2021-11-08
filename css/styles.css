@@ -9,15 +9,16 @@
 
 .details {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr)); }
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); }
 
 .ads {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr)); }
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  grid-auto-rows: 1fr; }
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   grid-gap: 2rem; }
 
 .header {
@@ -31,6 +32,15 @@
     padding: 8rem;
     width: 90rem;
     text-align: center; }
+    @media (max-width: 900px) {
+      .header__container {
+        padding: 5rem;
+        width: 70%; } }
+    @media (max-width: 560px) {
+      .header__container h1 {
+        font-size: 3.2rem; }
+      .header__container h4 {
+        font-size: 1.5rem; } }
 
 .nav {
   display: flex;
@@ -40,6 +50,9 @@
     flex: 1; }
   .nav__items {
     list-style: none; }
+    @media (max-width: 600px) {
+      .nav__items {
+        display: none; } }
   .nav__item {
     display: inline-block; }
   .nav__link {
@@ -82,6 +95,9 @@
   font-weight: lighter;
   font-size: 7rem;
   line-height: 1; }
+  @media (max-width: 900px) {
+    .heading-1 {
+      font-size: 5rem; } }
   .heading-1 span {
     font-weight: bolder; }
 
@@ -123,11 +139,21 @@
   background-color: #D7DDD1;
   padding: 15rem;
   font-size: 1.6rem; }
+  @media (max-width: 1270px) {
+    .details {
+      padding: 15rem 5%; } }
 
 .detail {
   width: 80%; }
+  @media (max-width: 618px) {
+    .detail {
+      width: 100%; } }
   .detail:last-child {
     justify-self: end; }
+    @media (max-width: 618px) {
+      .detail:last-child {
+        margin-top: 4rem;
+        justify-self: start; } }
   .detail__number {
     color: #ffffff;
     font-size: 20rem;
@@ -136,6 +162,15 @@
 .ads {
   height: 90rem;
   text-align: center; }
+  @media (max-width: 1450px) {
+    .ads {
+      height: 70rem; } }
+  @media (max-width: 940px) {
+    .ads {
+      height: 60rem; } }
+  @media (max-width: 742px) {
+    .ads {
+      height: 110rem; } }
   .ads > * {
     background-size: 100% 90rem; }
   .ads__ad-1 {
@@ -161,18 +196,37 @@
 
 .gallery {
   padding: 7rem; }
+  @media (max-width: 850px) {
+    .gallery {
+      padding: 3rem; } }
+  @media (max-width: 430px) {
+    .gallery {
+      padding: 0; } }
   .gallery__img {
     object-fit: cover;
     width: 100%;
     height: 50rem; }
+    @media (max-width: 430px) {
+      .gallery__img {
+        width: 95%;
+        margin: 0 auto; } }
 
 .about {
   background-color: #D7DDD1;
   padding: 15rem;
   columns: 2; }
+  @media (max-width: 1270px) {
+    .about {
+      padding: 15rem 5%; } }
+  @media (max-width: 600px) {
+    .about {
+      columns: 1; } }
   .about__text {
     font-size: 1.6rem;
     width: 90%; }
+    @media (max-width: 600px) {
+      .about__text {
+        width: 100%; } }
 
 .cta {
   background-image: url("../img/big-leaf-2.jpg");
@@ -182,8 +236,27 @@
   padding-left: 10rem; }
   .cta h2 {
     font-size: 6rem; }
+    @media (max-width: 600px) {
+      .cta h2 {
+        font-size: 4.5rem; } }
   .cta .btn {
     margin-left: 1rem; }
+  @media (max-width: 742px) {
+    .cta {
+      height: 70rem;
+      padding: 0;
+      display: flex;
+      place-items: center;
+      justify-content: center;
+      flex-direction: column; }
+      .cta .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .cta .form .btn {
+          margin-left: 0;
+          margin-top: 2rem;
+          width: fit-content; } }
 
 .btn {
   border: 2px solid #000000;
@@ -252,7 +325,13 @@ html {
   font-size: 62.5%;
   font-family: "Raleway";
   line-height: 1.6; }
+  @media (max-width: 1360px) {
+    html {
+      font-size: 58%; } }
 
 body {
   padding: 3rem;
   box-sizing: border-box; }
+  @media (max-width: 900px) {
+    body {
+      padding: 0; } }
